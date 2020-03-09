@@ -1,3 +1,12 @@
+<!-- 
+/*
+| -------------------------------------------------------------------
+| MEMBUAT VIEW V_tampil.php
+| -------------------------------------------------------------------
+| Gunananya untuk menampilkan data dari database agar bisa dilihat 
+| user
+*/
+ -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +14,16 @@
 </head>
 <body>
 	<center><h1>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</h1></center>
+	<!-- 
+	/*
+	| -------------------------------------------------------------------
+	| FUNGSI anchor()
+	| -------------------------------------------------------------------
+	| Gunananya untuk membuat hyperlink, jadi pada parameter pertama 
+	| di function anchor() letakkan link tujuan, dan pada parameter kedua 
+	| letakkan text yang akan dimunculkan 
+	*/
+	 -->
 	<center><?php echo anchor('Crud/tambah','Tambah Data'); ?></center>
 	<table style="margin:20px auto;" border="1">
 		<tr>

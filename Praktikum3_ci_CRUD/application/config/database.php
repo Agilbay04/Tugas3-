@@ -1,3 +1,12 @@
+<!-- 
+/*
+| -------------------------------------------------------------------
+| KONFIGURASI DATABASE
+| -------------------------------------------------------------------
+| Setelah kita membuat database tadi, dilanjutkan dengan menkonfigurasi
+| database di config/database.php
+*/
+ -->
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -76,9 +85,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'loginCI',
+	'username' => 'root', // atur username dari database yang telah dibuat, biasanya defaultnya usernamenya root
+	'password' => '',     // Untuk password, jika database menggunakan password silahlkan isi kolom ini, jiK tidak bisa dikosongkan
+	'database' => 'CRUD', // isikan dengan nama database yang telah dibuat tadi, di sini tadi database yang dibuat diberi nama CRUD
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -1,3 +1,10 @@
+/*
+|-----------------------------------------------------------------
+| MEMBUAT CRUD DI CODEIGNITER
+|-----------------------------------------------------------------
+| Pertama membuat database baru
+*/
+
 -- phpMyAdmin SQL Dump
 -- version 3.5.2.2
 -- http://www.phpmyadmin.net
