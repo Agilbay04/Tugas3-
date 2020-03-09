@@ -92,8 +92,9 @@ class Crud extends CI_Controller{
 	| -------------------------------------------------------------------
 	| BUAT FUNCTION edit()
 	| -------------------------------------------------------------------
-	| Link di bawah ini tertuju pad amethod hapus pada controller Crud.php
-	| berisi pengiriman data id data pada paramater ke 3 nya 
+	| Di Function ini id dijadikan menjadi array yang akan kita gunakan 
+	| untuk mengambil data menurut id  dengan menggunakan function 
+	| edit_data pada model M_data
 	*/
 	function edit($id){
 		$where = array('id' => $id);
@@ -101,22 +102,50 @@ class Crud extends CI_Controller{
 		$this->load->view('V_edit',$data);
 	}
 
+	/*
+	| -------------------------------------------------------------------
+	| BUAT FUNCTION update()
+	| -------------------------------------------------------------------
+	*/
 	function update(){
+		/*
+		| -------------------------------------------------------------------
+		| syntax berikut menangkap data lama dari form edit 
+		| -------------------------------------------------------------------
+		*/
 		$id = $this->input->post('id');
 		$nama = $this->input->post('nama');
 		$alamat = $this->input->post('alamat');
 		$pekerjaan = $this->input->post('pekerjaan');
-	
+		
+		/*
+		| -------------------------------------------------------------------
+		| kemudian kita masukkan data yang akan kita update ke dalam variabel
+		| data
+		| -------------------------------------------------------------------
+		*/
 		$data = array(
 			'nama' => $nama,
 			'alamat' => $alamat,
 			'pekerjaan' => $pekerjaan
 		);
-	
+		
+		/*
+		| -------------------------------------------------------------------
+		| variable where berikut yang menentukan data mana yang akan di update
+		| berdasarkan id
+		| -------------------------------------------------------------------
+		*/
 		$where = array(
 			'id' => $id
 		);
-	
+		
+		/*
+		| -------------------------------------------------------------------
+		| Setelah itu kita panggil method update_data() pada model M_data
+		| untuk menjalankan proses update data
+		| -------------------------------------------------------------------
+		*/
 		$this->M_data->update_data($where,$data,'user');
 		redirect('Crud/index');
 	}

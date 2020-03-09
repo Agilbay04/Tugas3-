@@ -49,7 +49,7 @@
 				| -------------------------------------------------------------------
 				| MEMBUAT LINK EDIT DATA
 				| -------------------------------------------------------------------
-				| Link di bawah ini tertuju pada method hapus edit controller Crud.php
+				| Link di bawah ini tertuju pada method edit controller Crud.php
 				| berisi pengiriman data id data pada paramater ke 3 nya melalui url
 				*/
 				-->

@@ -1,3 +1,11 @@
+<!-- 
+/*
+| -------------------------------------------------------------------
+| MEMBUAT FORM UNTUK EDIT DATA
+| -------------------------------------------------------------------
+*/
+ -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +17,16 @@
 		<h3>Edit Data</h3>
 	</center>
 	<?php foreach($user as $u){ ?>
+
+	<!-- 
+	/*
+	| -------------------------------------------------------------------
+	| MENGARAHKAN FORM ACTION EDIT DATA
+	| -------------------------------------------------------------------
+	| arahkan form action edit data ke sebuah method update() pada 
+	| controller Crud.php
+	*/
+	 -->
 	<form action="<?php echo base_url(). 'Crud/update'; ?>" method="post">
 		<table style="margin:20px auto;">
 			<tr>

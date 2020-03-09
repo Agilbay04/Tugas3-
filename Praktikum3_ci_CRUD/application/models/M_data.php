@@ -46,10 +46,24 @@ class M_data extends CI_Model{
 		$this->db->delete($table);
 	}
 
+	/*
+	| -------------------------------------------------------------------
+	| PROSES PENGAMBILAN DATA BERDASARKAN id
+	| -------------------------------------------------------------------
+	| di function edit_data() terjadi proses pengambilan data yang mau di
+	| edit berdasarkan id
+	*/
 	function edit_data($where,$table){		
 		return $this->db->get_where($table,$where);
 	}
 
+	/*
+	| -------------------------------------------------------------------
+	| OPERASI SQL UNTUK MENGUPDATE DATA DI DATABASE
+	| -------------------------------------------------------------------
+	| Terdapat fungsi where yang berguna menyeleksi query dan update untuk
+	| mengupdate data yang diubah yang terdapat di database
+	*/
 	function update_data($where,$data,$table){
 		$this->db->where($where);
 		$this->db->update($table,$data);
