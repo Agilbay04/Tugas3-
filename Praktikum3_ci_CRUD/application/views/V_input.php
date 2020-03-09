@@ -8,6 +8,14 @@
 		<h1>Membuat CRUD dengan CodeIgniter | MalasNgoding.com</h1>
 		<h3>Tambah data baru</h3>
 	</center>
+	<!-- 
+	/*
+	| -------------------------------------------------------------------
+	| ARAHKAN ACTION FORM INPUT KE METHOD TAMBAH AKSI PADA CONTROLLER 
+	| Crud.php
+	| ------------------------------------------------------------------- 
+	*/
+	 -->
 	<form action="<?php echo base_url(). 'Crud/tambah_aksi'; ?>" method="post">
 		<table style="margin:20px auto;">
 			<tr>

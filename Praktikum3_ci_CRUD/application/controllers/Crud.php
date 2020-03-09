@@ -48,7 +48,17 @@ class Crud extends CI_Controller{
 		$this->load->view('V_input');
 	}
 
-	
+	/*
+	| -------------------------------------------------------------------
+	| BUAT FUNCTION tambah_aksi()
+	| -------------------------------------------------------------------
+	| Gunananya untuk menghandle inputan pada form view input 
+	| 1. kita menangkap iputan dari form dengan function $this->input->post
+	|    ('nama form iput') kemudian jadikan array
+	| 2. Kemudian menginput data ke database dengan model M_data. Pada parameter pertama kita iput array data
+	|    yang berisi data-data dari input, pada parameter kedua di isi nama tabel tujuan penyimpanan 
+	| 3. Kemudian setelah data tersimpan mengalihkan ke method index redirect('Crud/index');
+	*/
 	function tambah_aksi(){
 		$nama = $this->input->post('nama');
 		$alamat = $this->input->post('alamat');
@@ -62,13 +72,29 @@ class Crud extends CI_Controller{
 		$this->M_data->input_data($data,'user');
 		redirect('Crud/index');
 	}
-
+ 
+	/*
+	| -------------------------------------------------------------------
+	| BUAT FUNCTION hapus()
+	| -------------------------------------------------------------------
+	| pada function hapus() siberikan variable $id disini berguna untuk
+	| menangkap data id yang dikirim melalu url dari link hapus kemudian 
+	| dijadikan array, kemudian kita kirimkan data arraynya ke model 
+	| M_data 
+	*/
 	function hapus($id){
 		$where = array('id' => $id);
 		$this->M_data->hapus_data($where,'user');
 		redirect('Crud/index');
 	}
-
+ 
+	/*
+	| -------------------------------------------------------------------
+	| BUAT FUNCTION edit()
+	| -------------------------------------------------------------------
+	| Link di bawah ini tertuju pad amethod hapus pada controller Crud.php
+	| berisi pengiriman data id data pada paramater ke 3 nya 
+	*/
 	function edit($id){
 		$where = array('id' => $id);
 		$data['user'] = $this->M_data->edit_data($where,'user')->result();

@@ -23,10 +23,24 @@ class M_data extends CI_Model{
 		return $this->db->get('user');
 	}
 
+	/*
+	| -------------------------------------------------------------------
+	| OPERASI INSERT SQL KE DATABASE
+	| -------------------------------------------------------------------
+	| Gunananya untuk menginsertkan atau menginputkan data ke database 
+	| tujuan 
+	*/
 	function input_data($data,$table){
 		$this->db->insert($table,$data);
 	}
 
+	/*
+	| -------------------------------------------------------------------
+	| OPERASI SQL UNTUK MENGHAPUS DATA DI DATABASE
+	| -------------------------------------------------------------------
+	| Terdapat fungsi where yang berguna menyeleksi query dan delete untuk
+	| menghapus data di database
+	*/
 	function hapus_data($where,$table){
 		$this->db->where($where);
 		$this->db->delete($table);

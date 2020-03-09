@@ -43,8 +43,28 @@
 			<td><?php echo $u->alamat ?></td>
 			<td><?php echo $u->pekerjaan ?></td>
 			<td>
+
+				<!-- 
+				/*
+				| -------------------------------------------------------------------
+				| MEMBUAT LINK EDIT DATA
+				| -------------------------------------------------------------------
+				| Link di bawah ini tertuju pada method hapus edit controller Crud.php
+				| berisi pengiriman data id data pada paramater ke 3 nya melalui url
+				*/
+				-->
 			    <?php echo anchor('Crud/edit/'.$u->id,'Edit'); ?>
-                <?php echo anchor('Crud/hapus/'.$u->id,'Hapus'); ?>
+                
+				<!-- 
+				/*
+				| -------------------------------------------------------------------
+				| MEMBUAT LINK HAPUS DATA
+				| -------------------------------------------------------------------
+				| Link di bawah ini tertuju pad amethod hapus pada controller Crud.php
+				| berisi pengiriman data id data pada paramater ke 3 nya 
+				*/
+				-->
+				<?php echo anchor('Crud/hapus/'.$u->id,'Hapus'); ?>
 			</td>
 		</tr>
 		<?php } ?>
